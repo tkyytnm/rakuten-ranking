@@ -29,6 +29,7 @@ function App() {
       </section>
       <footer>
         {/* <!-- Rakuten Web Services Attribution Snippet FROM HERE --> */}
+        {/* eslint-disable-next-line */}
         <a href="https://developers.rakuten.com/" target="_blank">
           Supported by Rakuten Developers
         </a>
