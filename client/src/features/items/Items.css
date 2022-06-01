@@ -28,7 +28,7 @@ li {
 }
 
 .rank span {
-  font-size:20px;
+  font-size: 20px;
 }
 
 .item .name {
@@ -74,4 +74,8 @@ li {
 
 .item .review span {
   margin-right: 30px;
+}
+
+#loading {
+  text-align: center;
 }

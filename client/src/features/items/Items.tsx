@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./Items.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 interface Error {
   message: string;
@@ -29,7 +32,7 @@ function Items() {
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [data, setData] = useState<Data>({});
 
-  const requestUrl = ``;
+  const requestUrl = `/api`;
 
   useEffect(() => {
     fetch(requestUrl)
@@ -49,13 +52,13 @@ function Items() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <div id="loading">Loading...</div>;
   } else {
     return (
       <ul className="items">
         {data.Items?.map((item: Item) => {
           return (
-            <li key={item.Item?.itemCode} className="item">
+            <li key={item.Item?.itemCode} className="item" data-aos="fade-up">
               <div className="rank">
                 {item.Item?.rank}
                 <span>位</span>
