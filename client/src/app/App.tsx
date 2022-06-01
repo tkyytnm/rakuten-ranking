@@ -1,5 +1,5 @@
 import "./App.css";
-import Items from "./Items";
+import Items from "../features/items/Items";
 import { AiOutlineVerticalAlignTop } from "react-icons/ai";
 import { useState } from "react";
 
